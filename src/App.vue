@@ -1,8 +1,18 @@
+import ZeroTrustWidget from './ZeroTrustWidget.vue';
+
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
-
+<template>
+  <div>
+    <zero-trust-widget
+      :score="zeroTrustData.ZeroTrustScore"
+      :metrics="zeroTrustData.metrics"
+      :riskCategory="zeroTrustData.riskCategory"
+    />
+  </div>
+</template>
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 
